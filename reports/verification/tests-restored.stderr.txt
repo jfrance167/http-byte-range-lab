@@ -1,0 +1,32 @@
+test_absent_global_scope_and_sorted_reasons (test_lab.LabTests.test_absent_global_scope_and_sorted_reasons) ... ok
+test_actual_cli_fresh_markdown_existing_and_missing_paths (test_lab.LabTests.test_actual_cli_fresh_markdown_existing_and_missing_paths) ... ok
+test_actual_cli_supported_unsupported_invalid_and_alias (test_lab.LabTests.test_actual_cli_supported_unsupported_invalid_and_alias) ... ok
+test_actual_closed_stdout_at_four_sizes (test_lab.LabTests.test_actual_closed_stdout_at_four_sizes) ... ok
+test_aggregate_input_depth_node_container_limits (test_lab.LabTests.test_aggregate_input_depth_node_container_limits) ... ok
+test_all_completed_non200_baselines_ignored (test_lab.LabTests.test_all_completed_non200_baselines_ignored) ... ok
+test_api_cycles_custom_types_and_aliases (test_lab.LabTests.test_api_cycles_custom_types_and_aliases) ... ok
+test_application_import_capability_boundary (test_lab.LabTests.test_application_import_capability_boundary) ... ok
+test_cli_short_and_flush_stdout_fixed_errors (test_lab.LabTests.test_cli_short_and_flush_stdout_fixed_errors) ... ok
+test_complete_report_fields_and_inert_markdown (test_lab.LabTests.test_complete_report_fields_and_inert_markdown) ... ok
+test_empty_and_zero_suffix_distinction (test_lab.LabTests.test_empty_and_zero_suffix_distinction) ... ok
+test_feature_validation_even_when_ignored (test_lab.LabTests.test_feature_validation_even_when_ignored) ... ok
+test_fresh_output_never_overwrites (test_lab.LabTests.test_fresh_output_never_overwrites) ... ok
+test_frozen_bytes (test_lab.LabTests.test_frozen_bytes) ... ok
+test_frozen_labels (test_lab.LabTests.test_frozen_labels) ... ok
+test_if_range_match_trace_and_method_case (test_lab.LabTests.test_if_range_match_trace_and_method_case) ... ok
+test_independent_tiny_index_oracle (test_lab.LabTests.test_independent_tiny_index_oracle) ... ok
+test_informational_geometry_but_unknown_handling (test_lab.LabTests.test_informational_geometry_but_unknown_handling) ... ok
+test_input_types_shapes_and_conflicting_values (test_lab.LabTests.test_input_types_shapes_and_conflicting_values) ... ok
+test_late_invalid_before_any_semantic_result (test_lab.LabTests.test_late_invalid_before_any_semantic_result) ... ok
+test_no_input_or_result_alias_mutation (test_lab.LabTests.test_no_input_or_result_alias_mutation) ... ok
+test_parser_lexical_depth_and_json_authority (test_lab.LabTests.test_parser_lexical_depth_and_json_authority) ... ok
+test_reversed_is_invalid_not_unsatisfiable (test_lab.LabTests.test_reversed_is_invalid_not_unsatisfiable) ... ok
+test_short_flush_close_write_and_cleanup_errors (test_lab.LabTests.test_short_flush_close_write_and_cleanup_errors) ... ok
+test_stdout_silence_failure_is_disclosed (test_lab.LabTests.test_stdout_silence_failure_is_disclosed) ... ok
+test_unicode_controls_and_duplicate_ids (test_lab.LabTests.test_unicode_controls_and_duplicate_ids) ... ok
+test_units_coding_case_and_provenance (test_lab.LabTests.test_units_coding_case_and_provenance) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 1.612s
+
+OK

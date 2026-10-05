@@ -1,0 +1,183 @@
+{
+  "runtime": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "checks": [
+    {
+      "name": "tests-normal",
+      "arguments": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "passed": true
+    },
+    {
+      "name": "tests-optimized",
+      "arguments": [
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "passed": true
+    },
+    {
+      "name": "compile",
+      "arguments": [
+        "-m",
+        "compileall",
+        "-q",
+        "rangelab",
+        "tests",
+        "tools"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "passed": true
+    },
+    {
+      "name": "bandit",
+      "arguments": [
+        "-m",
+        "bandit",
+        "-r",
+        "rangelab",
+        "tests",
+        "tools",
+        "-f",
+        "json"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "passed": true
+    },
+    {
+      "name": "omit-inclusive-count",
+      "arguments": [
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 1,
+      "expected_exit": 1,
+      "passed": true
+    },
+    {
+      "name": "omit-suffix-clamp",
+      "arguments": [
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 1,
+      "expected_exit": 1,
+      "passed": true
+    },
+    {
+      "name": "wrong-first-boundary",
+      "arguments": [
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 1,
+      "expected_exit": 1,
+      "passed": true
+    },
+    {
+      "name": "ignore-baseline-gate",
+      "arguments": [
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 1,
+      "expected_exit": 1,
+      "passed": true
+    },
+    {
+      "name": "tests-restored",
+      "arguments": [
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "passed": true
+    },
+    {
+      "name": "demo-json",
+      "arguments": [
+        "-m",
+        "rangelab",
+        "fixtures/cases.json",
+        "--format",
+        "json",
+        "--output",
+        "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\http-byte-range-lab\\reports\\verification-cli-reviewed\\demo.json"
+      ],
+      "exit_code": 2,
+      "expected_exit": 2,
+      "passed": true
+    },
+    {
+      "name": "demo-markdown",
+      "arguments": [
+        "-m",
+        "rangelab",
+        "fixtures/cases.json",
+        "--format",
+        "markdown",
+        "--output",
+        "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\http-byte-range-lab\\reports\\verification-cli-reviewed\\demo.md"
+      ],
+      "exit_code": 2,
+      "expected_exit": 2,
+      "passed": true
+    }
+  ],
+  "model_restored": true,
+  "hashes": {
+    "rangelab\\contracts.py": "b990a5bdedcd66210e99fcc4b88439805d98e9e6b02493056b47340d179aa151",
+    "rangelab\\model.py": "715b54f6bc4938b05f6013f490ff82683b1cb7139039446acfb88756d746926b",
+    "rangelab\\report.py": "0265c39b931b4dbdd7a4565357cfbb49dce3cd1b1e3408febe2c38ef6d936d81",
+    "rangelab\\__init__.py": "9a4371cfc5e1aa79a8a2fc47170886c7e86203fb7a8b9e5b951d2d6e58e45bc1",
+    "rangelab\\__main__.py": "cbbca890920f2909f5e007851e1ef258291bfff2d1fac755eab8bc51771ece84",
+    "tests\\test_lab.py": "80ea5e4b0f567b0ab86ea2ce38e489e581fcb7df1d0a407d526c384da0ac9162",
+    "tools\\verify.py": "7339e9b4e5f425bf89a0e04a0f4203a1b9465e4989a4a7fd9c2f9dc1c421b6e0",
+    "fixtures\\cases.json": "177b181d83a4e5572e485af7f77773200452df17dafcc0301d3acdd8308bc0be",
+    "fixtures\\expected.json": "afe7f57d21a72448e146a7b6c438abc4c4c3ca933f353d043a4d3975205525ea",
+    "CONTRACT.md": "221108f901cb000a50ba73a70d9db0ac6dd137151f867b1b3e3e61fc3e60dae2"
+  },
+  "passed": true
+}

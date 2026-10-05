@@ -1,0 +1,1367 @@
+{
+  "version": 1,
+  "results": [
+    {
+      "id": "closed-three",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "HONOR_SINGLE_RANGE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 2,
+        "last": 4
+      },
+      "byte_count": 3,
+      "handling": "HONOR_SINGLE_RANGE",
+      "hypothetical_status": 206,
+      "hypothetical_content_range": "bytes 2-4/10",
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "closed-clamp",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "HONOR_SINGLE_RANGE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 7,
+        "last": 9
+      },
+      "byte_count": 3,
+      "handling": "HONOR_SINGLE_RANGE",
+      "hypothetical_status": 206,
+      "hypothetical_content_range": "bytes 7-9/10",
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 7,
+          "last": 99,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "open-last",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "HONOR_SINGLE_RANGE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 9,
+        "last": 9
+      },
+      "byte_count": 1,
+      "handling": "HONOR_SINGLE_RANGE",
+      "hypothetical_status": 206,
+      "hypothetical_content_range": "bytes 9-9/10",
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "open",
+          "first": 9,
+          "last": null,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "open-equality",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "REJECT_UNSATISFIABLE_LAB_POLICY"
+      ],
+      "math_state": "UNSATISFIABLE",
+      "interval": null,
+      "byte_count": 0,
+      "handling": "REJECT_UNSATISFIABLE_LAB_POLICY",
+      "hypothetical_status": 416,
+      "hypothetical_content_range": "bytes */10",
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "open",
+          "first": 10,
+          "last": null,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "suffix-oversized",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "HONOR_SINGLE_RANGE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 0,
+        "last": 9
+      },
+      "byte_count": 10,
+      "handling": "HONOR_SINGLE_RANGE",
+      "hypothetical_status": 206,
+      "hypothetical_content_range": "bytes 0-9/10",
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "suffix",
+          "first": null,
+          "last": null,
+          "suffix": 12
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "suffix-zero",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "REJECT_UNSATISFIABLE_LAB_POLICY"
+      ],
+      "math_state": "UNSATISFIABLE",
+      "interval": null,
+      "byte_count": 0,
+      "handling": "REJECT_UNSATISFIABLE_LAB_POLICY",
+      "hypothetical_status": 416,
+      "hypothetical_content_range": "bytes */10",
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "suffix",
+          "first": null,
+          "last": null,
+          "suffix": 0
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "reversed-invalid",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "IGNORE_INVALID_LAB_POLICY"
+      ],
+      "math_state": "INVALID_RANGE",
+      "interval": null,
+      "byte_count": null,
+      "handling": "IGNORE_INVALID_LAB_POLICY",
+      "hypothetical_status": 200,
+      "hypothetical_content_range": null,
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 7,
+          "last": 6,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "one-byte",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "HONOR_SINGLE_RANGE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 0,
+        "last": 0
+      },
+      "byte_count": 1,
+      "handling": "HONOR_SINGLE_RANGE",
+      "hypothetical_status": 206,
+      "hypothetical_content_range": "bytes 0-0/1",
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 1,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 0,
+          "last": 0,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "empty-open",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "REJECT_UNSATISFIABLE_LAB_POLICY"
+      ],
+      "math_state": "UNSATISFIABLE",
+      "interval": null,
+      "byte_count": 0,
+      "handling": "REJECT_UNSATISFIABLE_LAB_POLICY",
+      "hypothetical_status": 416,
+      "hypothetical_content_range": "bytes */0",
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 0,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "open",
+          "first": 0,
+          "last": null,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "empty-positive-suffix",
+      "status": "UNSUPPORTED",
+      "reason_codes": [
+        "UNSUPPORTED_EMPTY_SUFFIX_HANDLING"
+      ],
+      "math_state": "SATISFIABLE_EMPTY",
+      "interval": null,
+      "byte_count": 0,
+      "handling": "UNSUPPORTED_EMPTY_SUFFIX_HANDLING",
+      "hypothetical_status": null,
+      "hypothetical_content_range": null,
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 0,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "suffix",
+          "first": null,
+          "last": null,
+          "suffix": 1
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "baseline-not-modified",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "IGNORE_BASELINE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 2,
+        "last": 4
+      },
+      "byte_count": 3,
+      "handling": "IGNORE_BASELINE",
+      "hypothetical_status": 304,
+      "hypothetical_content_range": null,
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 304,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "if-range-mismatch",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "IGNORE_IF_RANGE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 2,
+        "last": 4
+      },
+      "byte_count": 3,
+      "handling": "IGNORE_IF_RANGE",
+      "hypothetical_status": 200,
+      "hypothetical_content_range": null,
+      "if_range_state": "FAIL",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "mismatch",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "server-ignore",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "IGNORE_SERVER_CHOICE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 2,
+        "last": 4
+      },
+      "byte_count": 3,
+      "handling": "IGNORE_SERVER_CHOICE",
+      "hypothetical_status": 200,
+      "hypothetical_content_range": null,
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "ignore",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "head-ignore",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "IGNORE_METHOD"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 2,
+        "last": 4
+      },
+      "byte_count": 3,
+      "handling": "IGNORE_METHOD",
+      "hypothetical_status": 200,
+      "hypothetical_content_range": null,
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "HEAD",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "gzip-casing",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "HONOR_SINGLE_RANGE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 2,
+        "last": 4
+      },
+      "byte_count": 3,
+      "handling": "HONOR_SINGLE_RANGE",
+      "hypothetical_status": 206,
+      "hypothetical_content_range": "bytes 2-4/10",
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "GZiP",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "bytes-casing",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "HONOR_SINGLE_RANGE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 2,
+        "last": 4
+      },
+      "byte_count": 3,
+      "handling": "HONOR_SINGLE_RANGE",
+      "hypothetical_status": 206,
+      "hypothetical_content_range": "bytes 2-4/10",
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "ByTeS",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "br-metadata",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "HONOR_SINGLE_RANGE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 2,
+        "last": 4
+      },
+      "byte_count": 3,
+      "handling": "HONOR_SINGLE_RANGE",
+      "hypothetical_status": 206,
+      "hypothetical_content_range": "bytes 2-4/10",
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "br",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "unknown-length",
+      "status": "UNSUPPORTED",
+      "reason_codes": [
+        "UNSUPPORTED_LENGTH"
+      ],
+      "math_state": "UNKNOWN_CONTEXT",
+      "interval": null,
+      "byte_count": null,
+      "handling": "UNSUPPORTED_CONTEXT",
+      "hypothetical_status": null,
+      "hypothetical_content_range": null,
+      "if_range_state": "UNKNOWN_CONTEXT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": null,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "decoded-basis",
+      "status": "UNSUPPORTED",
+      "reason_codes": [
+        "UNSUPPORTED_LENGTH_BASIS"
+      ],
+      "math_state": "UNKNOWN_CONTEXT",
+      "interval": null,
+      "byte_count": null,
+      "handling": "UNSUPPORTED_CONTEXT",
+      "hypothetical_status": null,
+      "hypothetical_content_range": null,
+      "if_range_state": "UNKNOWN_CONTEXT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "decoded_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "unknown-basis",
+      "status": "UNSUPPORTED",
+      "reason_codes": [
+        "UNSUPPORTED_LENGTH_BASIS"
+      ],
+      "math_state": "UNKNOWN_CONTEXT",
+      "interval": null,
+      "byte_count": null,
+      "handling": "UNSUPPORTED_CONTEXT",
+      "hypothetical_status": null,
+      "hypothetical_content_range": null,
+      "if_range_state": "UNKNOWN_CONTEXT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "unknown"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "coding-outside-scope",
+      "status": "UNSUPPORTED",
+      "reason_codes": [
+        "UNSUPPORTED_CODING"
+      ],
+      "math_state": "UNKNOWN_CONTEXT",
+      "interval": null,
+      "byte_count": null,
+      "handling": "UNSUPPORTED_CONTEXT",
+      "hypothetical_status": null,
+      "hypothetical_content_range": null,
+      "if_range_state": "UNKNOWN_CONTEXT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "custom",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "multiple-feature",
+      "status": "UNSUPPORTED",
+      "reason_codes": [
+        "UNSUPPORTED_FEATURE"
+      ],
+      "math_state": "UNKNOWN_CONTEXT",
+      "interval": null,
+      "byte_count": null,
+      "handling": "UNSUPPORTED_CONTEXT",
+      "hypothetical_status": null,
+      "hypothetical_content_range": null,
+      "if_range_state": "UNKNOWN_CONTEXT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": [
+          "multiple-ranges"
+        ]
+      }
+    },
+    {
+      "id": "no-range",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "NO_RANGE"
+      ],
+      "math_state": "ABSENT",
+      "interval": null,
+      "byte_count": null,
+      "handling": "NO_RANGE",
+      "hypothetical_status": 200,
+      "hypothetical_content_range": null,
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": null,
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "informational-geometry",
+      "status": "UNSUPPORTED",
+      "reason_codes": [
+        "UNSUPPORTED_INFORMATIONAL_BASELINE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 2,
+        "last": 4
+      },
+      "byte_count": 3,
+      "handling": "UNSUPPORTED_INFORMATIONAL_BASELINE",
+      "hypothetical_status": null,
+      "hypothetical_content_range": null,
+      "if_range_state": "UNKNOWN_BASELINE",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 103,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "informational-no-range",
+      "status": "UNSUPPORTED",
+      "reason_codes": [
+        "UNSUPPORTED_INFORMATIONAL_BASELINE"
+      ],
+      "math_state": "ABSENT",
+      "interval": null,
+      "byte_count": null,
+      "handling": "UNSUPPORTED_INFORMATIONAL_BASELINE",
+      "hypothetical_status": null,
+      "hypothetical_content_range": null,
+      "if_range_state": "UNKNOWN_BASELINE",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 103,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": null,
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "if-range-unknown",
+      "status": "UNSUPPORTED",
+      "reason_codes": [
+        "UNSUPPORTED_IF_RANGE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 2,
+        "last": 4
+      },
+      "byte_count": 3,
+      "handling": "UNSUPPORTED_IF_RANGE",
+      "hypothetical_status": null,
+      "hypothetical_content_range": null,
+      "if_range_state": "UNKNOWN",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "unknown",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "no-range-unknown-if-range",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "NO_RANGE"
+      ],
+      "math_state": "ABSENT",
+      "interval": null,
+      "byte_count": null,
+      "handling": "NO_RANGE",
+      "hypothetical_status": 200,
+      "hypothetical_content_range": null,
+      "if_range_state": "IGNORED_NO_RANGE",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": null,
+        "server_policy": "honor",
+        "if_range": "unknown",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "head-unknown-if-range",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "IGNORE_METHOD"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 2,
+        "last": 4
+      },
+      "byte_count": 3,
+      "handling": "IGNORE_METHOD",
+      "hypothetical_status": 200,
+      "hypothetical_content_range": null,
+      "if_range_state": "IGNORED_METHOD",
+      "declaration": {
+        "method": "HEAD",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "unknown",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "failed-baseline-unknown-if-range",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "IGNORE_BASELINE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 2,
+        "last": 4
+      },
+      "byte_count": 3,
+      "handling": "IGNORE_BASELINE",
+      "hypothetical_status": 412,
+      "hypothetical_content_range": null,
+      "if_range_state": "NOT_REACHED_BASELINE",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 412,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "unknown",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "server-ignore-unknown-if-range",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "IGNORE_SERVER_CHOICE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 2,
+        "last": 4
+      },
+      "byte_count": 3,
+      "handling": "IGNORE_SERVER_CHOICE",
+      "hypothetical_status": 200,
+      "hypothetical_content_range": null,
+      "if_range_state": "IGNORED_SERVER_CHOICE",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "ignore",
+        "if_range": "unknown",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "empty-suffix-server-ignore",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "IGNORE_SERVER_CHOICE"
+      ],
+      "math_state": "SATISFIABLE_EMPTY",
+      "interval": null,
+      "byte_count": 0,
+      "handling": "IGNORE_SERVER_CHOICE",
+      "hypothetical_status": 200,
+      "hypothetical_content_range": null,
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 0,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "suffix",
+          "first": null,
+          "last": null,
+          "suffix": 1
+        },
+        "server_policy": "ignore",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "empty-suffix-if-range-fail",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "IGNORE_IF_RANGE"
+      ],
+      "math_state": "SATISFIABLE_EMPTY",
+      "interval": null,
+      "byte_count": 0,
+      "handling": "IGNORE_IF_RANGE",
+      "hypothetical_status": 200,
+      "hypothetical_content_range": null,
+      "if_range_state": "FAIL",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 0,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "suffix",
+          "first": null,
+          "last": null,
+          "suffix": 1
+        },
+        "server_policy": "honor",
+        "if_range": "mismatch",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "empty-suffix-baseline",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "IGNORE_BASELINE"
+      ],
+      "math_state": "SATISFIABLE_EMPTY",
+      "interval": null,
+      "byte_count": 0,
+      "handling": "IGNORE_BASELINE",
+      "hypothetical_status": 304,
+      "hypothetical_content_range": null,
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 304,
+        "representation": {
+          "length": 0,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "suffix",
+          "first": null,
+          "last": null,
+          "suffix": 1
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "maximum-open",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "HONOR_SINGLE_RANGE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 0,
+        "last": 999999999
+      },
+      "byte_count": 1000000000,
+      "handling": "HONOR_SINGLE_RANGE",
+      "hypothetical_status": 206,
+      "hypothetical_content_range": "bytes 0-999999999/1000000000",
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 1000000000,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "open",
+          "first": 0,
+          "last": null,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "maximum-first-equality",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "REJECT_UNSATISFIABLE_LAB_POLICY"
+      ],
+      "math_state": "UNSATISFIABLE",
+      "interval": null,
+      "byte_count": 0,
+      "handling": "REJECT_UNSATISFIABLE_LAB_POLICY",
+      "hypothetical_status": 416,
+      "hypothetical_content_range": "bytes */1000000000",
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 1000000000,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 1000000000,
+          "last": 1000000000,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "maximum-suffix",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "HONOR_SINGLE_RANGE"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 0,
+        "last": 9
+      },
+      "byte_count": 10,
+      "handling": "HONOR_SINGLE_RANGE",
+      "hypothetical_status": 206,
+      "hypothetical_content_range": "bytes 0-9/10",
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "suffix",
+          "first": null,
+          "last": null,
+          "suffix": 1000000000
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "unit-outside-scope",
+      "status": "UNSUPPORTED",
+      "reason_codes": [
+        "UNSUPPORTED_UNIT"
+      ],
+      "math_state": "UNKNOWN_CONTEXT",
+      "interval": null,
+      "byte_count": null,
+      "handling": "UNSUPPORTED_CONTEXT",
+      "hypothetical_status": null,
+      "hypothetical_content_range": null,
+      "if_range_state": "UNKNOWN_CONTEXT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "items",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "no-range-unknown-length",
+      "status": "UNSUPPORTED",
+      "reason_codes": [
+        "UNSUPPORTED_LENGTH"
+      ],
+      "math_state": "UNKNOWN_CONTEXT",
+      "interval": null,
+      "byte_count": null,
+      "handling": "UNSUPPORTED_CONTEXT",
+      "hypothetical_status": null,
+      "hypothetical_content_range": null,
+      "if_range_state": "UNKNOWN_CONTEXT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": null,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": null,
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    },
+    {
+      "id": "no-range-feature",
+      "status": "UNSUPPORTED",
+      "reason_codes": [
+        "UNSUPPORTED_FEATURE"
+      ],
+      "math_state": "UNKNOWN_CONTEXT",
+      "interval": null,
+      "byte_count": null,
+      "handling": "UNSUPPORTED_CONTEXT",
+      "hypothetical_status": null,
+      "hypothetical_content_range": null,
+      "if_range_state": "UNKNOWN_CONTEXT",
+      "declaration": {
+        "method": "GET",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": null,
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": [
+          "multipart"
+        ]
+      }
+    },
+    {
+      "id": "lowercase-get",
+      "status": "SUPPORTED",
+      "reason_codes": [
+        "IGNORE_METHOD"
+      ],
+      "math_state": "SATISFIABLE",
+      "interval": {
+        "first": 2,
+        "last": 4
+      },
+      "byte_count": 3,
+      "handling": "IGNORE_METHOD",
+      "hypothetical_status": 200,
+      "hypothetical_content_range": null,
+      "if_range_state": "ABSENT",
+      "declaration": {
+        "method": "get",
+        "baseline_status": 200,
+        "representation": {
+          "length": 10,
+          "content_coding": "identity",
+          "length_basis": "selected_representation_bytes"
+        },
+        "range": {
+          "unit": "bytes",
+          "kind": "closed",
+          "first": 2,
+          "last": 4,
+          "suffix": null
+        },
+        "server_policy": "honor",
+        "if_range": "absent",
+        "unsupported_features": []
+      }
+    }
+  ],
+  "assumptions": [
+    "Geometry is a counterfactual GET calculation over supplied representation octets.",
+    "Coding spelling and length are metadata only; no resource read or decoding occurs.",
+    "Baseline is a supplied completed normal/precondition outcome, not evaluated here.",
+    "If-Range and server choice are assumptions, not observed validator or origin behavior.",
+    "Status and Content-Range strings are explanatory hypotheses, never emitted HTTP.",
+    "No authentication, resource mutation, cache merging, live transfer or full conformance claim."
+  ]
+}

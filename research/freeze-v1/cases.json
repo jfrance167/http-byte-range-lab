@@ -1,0 +1,809 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "closed-three",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "closed-clamp",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 7,
+        "last": 99,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "open-last",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "open",
+        "first": 9,
+        "last": null,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "open-equality",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "open",
+        "first": 10,
+        "last": null,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "suffix-oversized",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "suffix",
+        "first": null,
+        "last": null,
+        "suffix": 12
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "suffix-zero",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "suffix",
+        "first": null,
+        "last": null,
+        "suffix": 0
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "reversed-invalid",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 7,
+        "last": 6,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "one-byte",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 1,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 0,
+        "last": 0,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "empty-open",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 0,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "open",
+        "first": 0,
+        "last": null,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "empty-positive-suffix",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 0,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "suffix",
+        "first": null,
+        "last": null,
+        "suffix": 1
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "baseline-not-modified",
+      "method": "GET",
+      "baseline_status": 304,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "if-range-mismatch",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "mismatch",
+      "unsupported_features": []
+    },
+    {
+      "id": "server-ignore",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "ignore",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "head-ignore",
+      "method": "HEAD",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "gzip-casing",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "GZiP",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "bytes-casing",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "ByTeS",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "br-metadata",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "br",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "unknown-length",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": null,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "decoded-basis",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "decoded_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "unknown-basis",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "unknown"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "coding-outside-scope",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "custom",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "multiple-feature",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": [
+        "multiple-ranges"
+      ]
+    },
+    {
+      "id": "no-range",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "informational-geometry",
+      "method": "GET",
+      "baseline_status": 103,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "informational-no-range",
+      "method": "GET",
+      "baseline_status": 103,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "if-range-unknown",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "unknown",
+      "unsupported_features": []
+    },
+    {
+      "id": "no-range-unknown-if-range",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "unknown",
+      "unsupported_features": []
+    },
+    {
+      "id": "head-unknown-if-range",
+      "method": "HEAD",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "unknown",
+      "unsupported_features": []
+    },
+    {
+      "id": "failed-baseline-unknown-if-range",
+      "method": "GET",
+      "baseline_status": 412,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "unknown",
+      "unsupported_features": []
+    },
+    {
+      "id": "server-ignore-unknown-if-range",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "ignore",
+      "if_range": "unknown",
+      "unsupported_features": []
+    },
+    {
+      "id": "empty-suffix-server-ignore",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 0,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "suffix",
+        "first": null,
+        "last": null,
+        "suffix": 1
+      },
+      "server_policy": "ignore",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "empty-suffix-if-range-fail",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 0,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "suffix",
+        "first": null,
+        "last": null,
+        "suffix": 1
+      },
+      "server_policy": "honor",
+      "if_range": "mismatch",
+      "unsupported_features": []
+    },
+    {
+      "id": "empty-suffix-baseline",
+      "method": "GET",
+      "baseline_status": 304,
+      "representation": {
+        "length": 0,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "suffix",
+        "first": null,
+        "last": null,
+        "suffix": 1
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "maximum-open",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 1000000000,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "open",
+        "first": 0,
+        "last": null,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "maximum-first-equality",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 1000000000,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 1000000000,
+        "last": 1000000000,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "maximum-suffix",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "suffix",
+        "first": null,
+        "last": null,
+        "suffix": 1000000000
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "unit-outside-scope",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "items",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "no-range-unknown-length",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": null,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    },
+    {
+      "id": "no-range-feature",
+      "method": "GET",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": [
+        "multipart"
+      ]
+    },
+    {
+      "id": "lowercase-get",
+      "method": "get",
+      "baseline_status": 200,
+      "representation": {
+        "length": 10,
+        "content_coding": "identity",
+        "length_basis": "selected_representation_bytes"
+      },
+      "range": {
+        "unit": "bytes",
+        "kind": "closed",
+        "first": 2,
+        "last": 4,
+        "suffix": null
+      },
+      "server_policy": "honor",
+      "if_range": "absent",
+      "unsupported_features": []
+    }
+  ]
+}

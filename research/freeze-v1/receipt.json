@@ -1,0 +1,14 @@
+[
+  {
+    "Path": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\http-byte-range-lab\\CONTRACT.md",
+    "Hash": "221108F901CB000A50BA73A70D9DB0AC6DD137151F867B1B3E3E61FC3E60DAE2"
+  },
+  {
+    "Path": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\http-byte-range-lab\\fixtures\\cases.json",
+    "Hash": "A93B61F27E3C34C4DE59EE85B3C5DB0C58F63737F9A5718D78FE874064263A02"
+  },
+  {
+    "Path": "C:\\Users\\Jake\\OneDrive - Alfred State College\\Documents\\New project\\http-byte-range-lab\\fixtures\\expected.json",
+    "Hash": "AFE7F57D21A72448E146A7B6C438ABC4C4C3CA933F353D043A4D3975205525EA"
+  }
+]

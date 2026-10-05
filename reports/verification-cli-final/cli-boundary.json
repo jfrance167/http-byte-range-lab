@@ -1,0 +1,247 @@
+{
+  "runtime": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "Fixed owned child wrappers use stdin barrier; NUL passed to main via JSON, never as OS argv",
+  "records": [
+    {
+      "case": "empty-output",
+      "optimized": false,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 31,
+      "diagnostic": "rangelab: INVALID_OUTPUT_PATH\n",
+      "passed": true
+    },
+    {
+      "case": "nul-input-wrapper",
+      "optimized": false,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 30,
+      "diagnostic": "rangelab: INVALID_INPUT_PATH\n",
+      "passed": true
+    },
+    {
+      "case": "nul-output-wrapper",
+      "optimized": false,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 31,
+      "diagnostic": "rangelab: INVALID_OUTPUT_PATH\n",
+      "passed": true
+    },
+    {
+      "case": "argument-error",
+      "optimized": false,
+      "exit": 2,
+      "expected": 2,
+      "stdout_bytes": 0,
+      "stderr_bytes": 26,
+      "diagnostic": "rangelab: ARGUMENT_ERROR\n",
+      "passed": true
+    },
+    {
+      "case": "missing-stderr-closed",
+      "optimized": false,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": null,
+      "diagnostic": null,
+      "passed": true
+    },
+    {
+      "case": "missing-both-closed",
+      "optimized": false,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": null,
+      "stderr_bytes": null,
+      "diagnostic": null,
+      "passed": true
+    },
+    {
+      "case": "arguments-both-closed",
+      "optimized": false,
+      "exit": 2,
+      "expected": 2,
+      "stdout_bytes": null,
+      "stderr_bytes": null,
+      "diagnostic": null,
+      "passed": true
+    },
+    {
+      "case": "help-checked",
+      "optimized": false,
+      "exit": 0,
+      "expected": 0,
+      "stdout_bytes": 309,
+      "stderr_bytes": 0,
+      "diagnostic": "",
+      "passed": true
+    },
+    {
+      "case": "help-stdout-closed",
+      "optimized": false,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": null,
+      "stderr_bytes": 20,
+      "diagnostic": "rangelab: IO_ERROR\n",
+      "passed": true
+    },
+    {
+      "case": "help-both-closed",
+      "optimized": false,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": null,
+      "stderr_bytes": null,
+      "diagnostic": null,
+      "passed": true
+    },
+    {
+      "case": "report-both-closed",
+      "optimized": false,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": null,
+      "stderr_bytes": null,
+      "diagnostic": null,
+      "passed": true
+    },
+    {
+      "case": "direct-module-empty-output",
+      "optimized": false,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 31,
+      "diagnostic": "rangelab: INVALID_OUTPUT_PATH\n",
+      "passed": true
+    },
+    {
+      "case": "empty-output",
+      "optimized": true,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 31,
+      "diagnostic": "rangelab: INVALID_OUTPUT_PATH\n",
+      "passed": true
+    },
+    {
+      "case": "nul-input-wrapper",
+      "optimized": true,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 30,
+      "diagnostic": "rangelab: INVALID_INPUT_PATH\n",
+      "passed": true
+    },
+    {
+      "case": "nul-output-wrapper",
+      "optimized": true,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 31,
+      "diagnostic": "rangelab: INVALID_OUTPUT_PATH\n",
+      "passed": true
+    },
+    {
+      "case": "argument-error",
+      "optimized": true,
+      "exit": 2,
+      "expected": 2,
+      "stdout_bytes": 0,
+      "stderr_bytes": 26,
+      "diagnostic": "rangelab: ARGUMENT_ERROR\n",
+      "passed": true
+    },
+    {
+      "case": "missing-stderr-closed",
+      "optimized": true,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": null,
+      "diagnostic": null,
+      "passed": true
+    },
+    {
+      "case": "missing-both-closed",
+      "optimized": true,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": null,
+      "stderr_bytes": null,
+      "diagnostic": null,
+      "passed": true
+    },
+    {
+      "case": "arguments-both-closed",
+      "optimized": true,
+      "exit": 2,
+      "expected": 2,
+      "stdout_bytes": null,
+      "stderr_bytes": null,
+      "diagnostic": null,
+      "passed": true
+    },
+    {
+      "case": "help-checked",
+      "optimized": true,
+      "exit": 0,
+      "expected": 0,
+      "stdout_bytes": 309,
+      "stderr_bytes": 0,
+      "diagnostic": "",
+      "passed": true
+    },
+    {
+      "case": "help-stdout-closed",
+      "optimized": true,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": null,
+      "stderr_bytes": 20,
+      "diagnostic": "rangelab: IO_ERROR\n",
+      "passed": true
+    },
+    {
+      "case": "help-both-closed",
+      "optimized": true,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": null,
+      "stderr_bytes": null,
+      "diagnostic": null,
+      "passed": true
+    },
+    {
+      "case": "report-both-closed",
+      "optimized": true,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": null,
+      "stderr_bytes": null,
+      "diagnostic": null,
+      "passed": true
+    },
+    {
+      "case": "direct-module-empty-output",
+      "optimized": true,
+      "exit": 1,
+      "expected": 1,
+      "stdout_bytes": 0,
+      "stderr_bytes": 31,
+      "diagnostic": "rangelab: INVALID_OUTPUT_PATH\n",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

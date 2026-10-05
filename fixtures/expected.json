@@ -1,0 +1,622 @@
+[
+  {
+    "id": "closed-three",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "HONOR_SINGLE_RANGE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 2,
+      "last": 4
+    },
+    "byte_count": 3,
+    "handling": "HONOR_SINGLE_RANGE",
+    "hypothetical_status": 206,
+    "hypothetical_content_range": "bytes 2-4/10",
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "closed-clamp",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "HONOR_SINGLE_RANGE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 7,
+      "last": 9
+    },
+    "byte_count": 3,
+    "handling": "HONOR_SINGLE_RANGE",
+    "hypothetical_status": 206,
+    "hypothetical_content_range": "bytes 7-9/10",
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "open-last",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "HONOR_SINGLE_RANGE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 9,
+      "last": 9
+    },
+    "byte_count": 1,
+    "handling": "HONOR_SINGLE_RANGE",
+    "hypothetical_status": 206,
+    "hypothetical_content_range": "bytes 9-9/10",
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "open-equality",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "REJECT_UNSATISFIABLE_LAB_POLICY"
+    ],
+    "math_state": "UNSATISFIABLE",
+    "interval": null,
+    "byte_count": 0,
+    "handling": "REJECT_UNSATISFIABLE_LAB_POLICY",
+    "hypothetical_status": 416,
+    "hypothetical_content_range": "bytes */10",
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "suffix-oversized",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "HONOR_SINGLE_RANGE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 0,
+      "last": 9
+    },
+    "byte_count": 10,
+    "handling": "HONOR_SINGLE_RANGE",
+    "hypothetical_status": 206,
+    "hypothetical_content_range": "bytes 0-9/10",
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "suffix-zero",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "REJECT_UNSATISFIABLE_LAB_POLICY"
+    ],
+    "math_state": "UNSATISFIABLE",
+    "interval": null,
+    "byte_count": 0,
+    "handling": "REJECT_UNSATISFIABLE_LAB_POLICY",
+    "hypothetical_status": 416,
+    "hypothetical_content_range": "bytes */10",
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "reversed-invalid",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "IGNORE_INVALID_LAB_POLICY"
+    ],
+    "math_state": "INVALID_RANGE",
+    "interval": null,
+    "byte_count": null,
+    "handling": "IGNORE_INVALID_LAB_POLICY",
+    "hypothetical_status": 200,
+    "hypothetical_content_range": null,
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "one-byte",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "HONOR_SINGLE_RANGE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 0,
+      "last": 0
+    },
+    "byte_count": 1,
+    "handling": "HONOR_SINGLE_RANGE",
+    "hypothetical_status": 206,
+    "hypothetical_content_range": "bytes 0-0/1",
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "empty-open",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "REJECT_UNSATISFIABLE_LAB_POLICY"
+    ],
+    "math_state": "UNSATISFIABLE",
+    "interval": null,
+    "byte_count": 0,
+    "handling": "REJECT_UNSATISFIABLE_LAB_POLICY",
+    "hypothetical_status": 416,
+    "hypothetical_content_range": "bytes */0",
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "empty-positive-suffix",
+    "status": "UNSUPPORTED",
+    "reason_codes": [
+      "UNSUPPORTED_EMPTY_SUFFIX_HANDLING"
+    ],
+    "math_state": "SATISFIABLE_EMPTY",
+    "interval": null,
+    "byte_count": 0,
+    "handling": "UNSUPPORTED_EMPTY_SUFFIX_HANDLING",
+    "hypothetical_status": null,
+    "hypothetical_content_range": null,
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "baseline-not-modified",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "IGNORE_BASELINE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 2,
+      "last": 4
+    },
+    "byte_count": 3,
+    "handling": "IGNORE_BASELINE",
+    "hypothetical_status": 304,
+    "hypothetical_content_range": null,
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "if-range-mismatch",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "IGNORE_IF_RANGE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 2,
+      "last": 4
+    },
+    "byte_count": 3,
+    "handling": "IGNORE_IF_RANGE",
+    "hypothetical_status": 200,
+    "hypothetical_content_range": null,
+    "if_range_state": "FAIL"
+  },
+  {
+    "id": "server-ignore",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "IGNORE_SERVER_CHOICE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 2,
+      "last": 4
+    },
+    "byte_count": 3,
+    "handling": "IGNORE_SERVER_CHOICE",
+    "hypothetical_status": 200,
+    "hypothetical_content_range": null,
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "head-ignore",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "IGNORE_METHOD"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 2,
+      "last": 4
+    },
+    "byte_count": 3,
+    "handling": "IGNORE_METHOD",
+    "hypothetical_status": 200,
+    "hypothetical_content_range": null,
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "gzip-casing",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "HONOR_SINGLE_RANGE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 2,
+      "last": 4
+    },
+    "byte_count": 3,
+    "handling": "HONOR_SINGLE_RANGE",
+    "hypothetical_status": 206,
+    "hypothetical_content_range": "bytes 2-4/10",
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "bytes-casing",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "HONOR_SINGLE_RANGE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 2,
+      "last": 4
+    },
+    "byte_count": 3,
+    "handling": "HONOR_SINGLE_RANGE",
+    "hypothetical_status": 206,
+    "hypothetical_content_range": "bytes 2-4/10",
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "br-metadata",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "HONOR_SINGLE_RANGE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 2,
+      "last": 4
+    },
+    "byte_count": 3,
+    "handling": "HONOR_SINGLE_RANGE",
+    "hypothetical_status": 206,
+    "hypothetical_content_range": "bytes 2-4/10",
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "unknown-length",
+    "status": "UNSUPPORTED",
+    "reason_codes": [
+      "UNSUPPORTED_LENGTH"
+    ],
+    "math_state": "UNKNOWN_CONTEXT",
+    "interval": null,
+    "byte_count": null,
+    "handling": "UNSUPPORTED_CONTEXT",
+    "hypothetical_status": null,
+    "hypothetical_content_range": null,
+    "if_range_state": "UNKNOWN_CONTEXT"
+  },
+  {
+    "id": "decoded-basis",
+    "status": "UNSUPPORTED",
+    "reason_codes": [
+      "UNSUPPORTED_LENGTH_BASIS"
+    ],
+    "math_state": "UNKNOWN_CONTEXT",
+    "interval": null,
+    "byte_count": null,
+    "handling": "UNSUPPORTED_CONTEXT",
+    "hypothetical_status": null,
+    "hypothetical_content_range": null,
+    "if_range_state": "UNKNOWN_CONTEXT"
+  },
+  {
+    "id": "unknown-basis",
+    "status": "UNSUPPORTED",
+    "reason_codes": [
+      "UNSUPPORTED_LENGTH_BASIS"
+    ],
+    "math_state": "UNKNOWN_CONTEXT",
+    "interval": null,
+    "byte_count": null,
+    "handling": "UNSUPPORTED_CONTEXT",
+    "hypothetical_status": null,
+    "hypothetical_content_range": null,
+    "if_range_state": "UNKNOWN_CONTEXT"
+  },
+  {
+    "id": "coding-outside-scope",
+    "status": "UNSUPPORTED",
+    "reason_codes": [
+      "UNSUPPORTED_CODING"
+    ],
+    "math_state": "UNKNOWN_CONTEXT",
+    "interval": null,
+    "byte_count": null,
+    "handling": "UNSUPPORTED_CONTEXT",
+    "hypothetical_status": null,
+    "hypothetical_content_range": null,
+    "if_range_state": "UNKNOWN_CONTEXT"
+  },
+  {
+    "id": "multiple-feature",
+    "status": "UNSUPPORTED",
+    "reason_codes": [
+      "UNSUPPORTED_FEATURE"
+    ],
+    "math_state": "UNKNOWN_CONTEXT",
+    "interval": null,
+    "byte_count": null,
+    "handling": "UNSUPPORTED_CONTEXT",
+    "hypothetical_status": null,
+    "hypothetical_content_range": null,
+    "if_range_state": "UNKNOWN_CONTEXT"
+  },
+  {
+    "id": "no-range",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "NO_RANGE"
+    ],
+    "math_state": "ABSENT",
+    "interval": null,
+    "byte_count": null,
+    "handling": "NO_RANGE",
+    "hypothetical_status": 200,
+    "hypothetical_content_range": null,
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "informational-geometry",
+    "status": "UNSUPPORTED",
+    "reason_codes": [
+      "UNSUPPORTED_INFORMATIONAL_BASELINE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 2,
+      "last": 4
+    },
+    "byte_count": 3,
+    "handling": "UNSUPPORTED_INFORMATIONAL_BASELINE",
+    "hypothetical_status": null,
+    "hypothetical_content_range": null,
+    "if_range_state": "UNKNOWN_BASELINE"
+  },
+  {
+    "id": "informational-no-range",
+    "status": "UNSUPPORTED",
+    "reason_codes": [
+      "UNSUPPORTED_INFORMATIONAL_BASELINE"
+    ],
+    "math_state": "ABSENT",
+    "interval": null,
+    "byte_count": null,
+    "handling": "UNSUPPORTED_INFORMATIONAL_BASELINE",
+    "hypothetical_status": null,
+    "hypothetical_content_range": null,
+    "if_range_state": "UNKNOWN_BASELINE"
+  },
+  {
+    "id": "if-range-unknown",
+    "status": "UNSUPPORTED",
+    "reason_codes": [
+      "UNSUPPORTED_IF_RANGE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 2,
+      "last": 4
+    },
+    "byte_count": 3,
+    "handling": "UNSUPPORTED_IF_RANGE",
+    "hypothetical_status": null,
+    "hypothetical_content_range": null,
+    "if_range_state": "UNKNOWN"
+  },
+  {
+    "id": "no-range-unknown-if-range",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "NO_RANGE"
+    ],
+    "math_state": "ABSENT",
+    "interval": null,
+    "byte_count": null,
+    "handling": "NO_RANGE",
+    "hypothetical_status": 200,
+    "hypothetical_content_range": null,
+    "if_range_state": "IGNORED_NO_RANGE"
+  },
+  {
+    "id": "head-unknown-if-range",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "IGNORE_METHOD"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 2,
+      "last": 4
+    },
+    "byte_count": 3,
+    "handling": "IGNORE_METHOD",
+    "hypothetical_status": 200,
+    "hypothetical_content_range": null,
+    "if_range_state": "IGNORED_METHOD"
+  },
+  {
+    "id": "failed-baseline-unknown-if-range",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "IGNORE_BASELINE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 2,
+      "last": 4
+    },
+    "byte_count": 3,
+    "handling": "IGNORE_BASELINE",
+    "hypothetical_status": 412,
+    "hypothetical_content_range": null,
+    "if_range_state": "NOT_REACHED_BASELINE"
+  },
+  {
+    "id": "server-ignore-unknown-if-range",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "IGNORE_SERVER_CHOICE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 2,
+      "last": 4
+    },
+    "byte_count": 3,
+    "handling": "IGNORE_SERVER_CHOICE",
+    "hypothetical_status": 200,
+    "hypothetical_content_range": null,
+    "if_range_state": "IGNORED_SERVER_CHOICE"
+  },
+  {
+    "id": "empty-suffix-server-ignore",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "IGNORE_SERVER_CHOICE"
+    ],
+    "math_state": "SATISFIABLE_EMPTY",
+    "interval": null,
+    "byte_count": 0,
+    "handling": "IGNORE_SERVER_CHOICE",
+    "hypothetical_status": 200,
+    "hypothetical_content_range": null,
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "empty-suffix-if-range-fail",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "IGNORE_IF_RANGE"
+    ],
+    "math_state": "SATISFIABLE_EMPTY",
+    "interval": null,
+    "byte_count": 0,
+    "handling": "IGNORE_IF_RANGE",
+    "hypothetical_status": 200,
+    "hypothetical_content_range": null,
+    "if_range_state": "FAIL"
+  },
+  {
+    "id": "empty-suffix-baseline",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "IGNORE_BASELINE"
+    ],
+    "math_state": "SATISFIABLE_EMPTY",
+    "interval": null,
+    "byte_count": 0,
+    "handling": "IGNORE_BASELINE",
+    "hypothetical_status": 304,
+    "hypothetical_content_range": null,
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "maximum-open",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "HONOR_SINGLE_RANGE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 0,
+      "last": 999999999
+    },
+    "byte_count": 1000000000,
+    "handling": "HONOR_SINGLE_RANGE",
+    "hypothetical_status": 206,
+    "hypothetical_content_range": "bytes 0-999999999/1000000000",
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "maximum-first-equality",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "REJECT_UNSATISFIABLE_LAB_POLICY"
+    ],
+    "math_state": "UNSATISFIABLE",
+    "interval": null,
+    "byte_count": 0,
+    "handling": "REJECT_UNSATISFIABLE_LAB_POLICY",
+    "hypothetical_status": 416,
+    "hypothetical_content_range": "bytes */1000000000",
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "maximum-suffix",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "HONOR_SINGLE_RANGE"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 0,
+      "last": 9
+    },
+    "byte_count": 10,
+    "handling": "HONOR_SINGLE_RANGE",
+    "hypothetical_status": 206,
+    "hypothetical_content_range": "bytes 0-9/10",
+    "if_range_state": "ABSENT"
+  },
+  {
+    "id": "unit-outside-scope",
+    "status": "UNSUPPORTED",
+    "reason_codes": [
+      "UNSUPPORTED_UNIT"
+    ],
+    "math_state": "UNKNOWN_CONTEXT",
+    "interval": null,
+    "byte_count": null,
+    "handling": "UNSUPPORTED_CONTEXT",
+    "hypothetical_status": null,
+    "hypothetical_content_range": null,
+    "if_range_state": "UNKNOWN_CONTEXT"
+  },
+  {
+    "id": "no-range-unknown-length",
+    "status": "UNSUPPORTED",
+    "reason_codes": [
+      "UNSUPPORTED_LENGTH"
+    ],
+    "math_state": "UNKNOWN_CONTEXT",
+    "interval": null,
+    "byte_count": null,
+    "handling": "UNSUPPORTED_CONTEXT",
+    "hypothetical_status": null,
+    "hypothetical_content_range": null,
+    "if_range_state": "UNKNOWN_CONTEXT"
+  },
+  {
+    "id": "no-range-feature",
+    "status": "UNSUPPORTED",
+    "reason_codes": [
+      "UNSUPPORTED_FEATURE"
+    ],
+    "math_state": "UNKNOWN_CONTEXT",
+    "interval": null,
+    "byte_count": null,
+    "handling": "UNSUPPORTED_CONTEXT",
+    "hypothetical_status": null,
+    "hypothetical_content_range": null,
+    "if_range_state": "UNKNOWN_CONTEXT"
+  },
+  {
+    "id": "lowercase-get",
+    "status": "SUPPORTED",
+    "reason_codes": [
+      "IGNORE_METHOD"
+    ],
+    "math_state": "SATISFIABLE",
+    "interval": {
+      "first": 2,
+      "last": 4
+    },
+    "byte_count": 3,
+    "handling": "IGNORE_METHOD",
+    "hypothetical_status": 200,
+    "hypothetical_content_range": null,
+    "if_range_state": "ABSENT"
+  }
+]
