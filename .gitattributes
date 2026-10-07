@@ -1,0 +1,35 @@
+
+# Preserve reviewed snapshot bytes across checkout platforms.
+/.github/workflows/codeql.yml -text
+/.gitignore -text
+/CONTRACT.md -text
+/DECISIONS.md -text
+/LEARNING.md -text
+/LICENSE -text
+/PLAN.md -text
+/README.md -text
+/RESEARCH.md -text
+/REVIEW.md -text
+/SECURITY.md -text
+/STATE.md -text
+/VERIFICATION.md -text
+/fixtures/expected.json -text
+/rangelab/__init__.py -text
+/rangelab/__main__.py -text
+/rangelab/contracts.py -text
+/rangelab/model.py -text
+/rangelab/report.py -text
+/reports/verification-cli-final/demo.json -text
+/reports/verification-cli-final/demo.md -text
+/reports/verification-cli-reviewed/demo.json -text
+/reports/verification-cli-reviewed/demo.md -text
+/reports/verification-reviewed/demo.json -text
+/reports/verification-reviewed/demo.md -text
+/reports/verification/demo.json -text
+/reports/verification/demo.md -text
+/requirements-security.txt -text
+/research/freeze-v1/cases.json -text
+/research/freeze-v1/expected.json -text
+/tasks/todo.md -text
+/tests/test_lab.py -text
+/tools/verify.py -text
